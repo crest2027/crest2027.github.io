@@ -124,6 +124,18 @@
   .people li a { text-decoration: none; }
   .people li a:hover { text-decoration: underline; }
 
+  /* Previous editions */
+  .editions { list-style: none; padding: 0; margin: 0; display: grid;
+              grid-template-columns: repeat(7, 1fr); gap: 12px; }
+  .editions a { display: block; text-decoration: none; color: var(--text);
+                background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+                padding: 14px 16px; height: 100%; transition: border-color .15s, transform .15s; }
+  .editions a:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--text); }
+  .editions .yr { font-family: Fraunces, Georgia, serif; font-weight: 650; font-size: 22px;
+                  color: var(--accent); display: block; line-height: 1.2; }
+  .editions .ed { font-size: 13px; color: var(--muted); display: block; line-height: 1.45; }
+  @media (max-width: 860px) { .editions { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); } }
+
   footer { background: #1b1e27; color: #c9ccd6; padding: 36px 0; font-size: 14px; }
   footer a { color: #ffffff; }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
@@ -147,6 +159,7 @@
     <a class="link" href="#speakers">Keynotes</a>
     <a class="link" href="#program">Program</a>
     <a class="link" href="#organization">Organization</a>
+    <a class="link" href="#previous">Previous editions</a>
   </div>
 </nav>
 
@@ -275,12 +288,28 @@
   </div>
 </section>
 
+<!-- ============ PREVIOUS EDITIONS ============ -->
+<section id="previous" class="tinted">
+  <div class="wrap">
+    <h2>Previous Editions</h2>
+    <ul class="editions">
+      <li><a href="https://www.crest26.cse.msu.edu/"><span class="yr">2026</span><span class="ed">7th edition<br>FLoC<br>Lisbon</span></a></li>
+      <li><a href="https://crest-etaps.github.io/"><span class="yr">2023</span><span class="ed">6th edition<br>ETAPS<br>Paris</span></a></li>
+      <li><a href="https://sites.google.com/view/crest2020"><span class="yr">2020</span><span class="ed">5th edition<br>ETAPS</span></a></li>
+      <li><a href="https://conf.researchr.org/track/etaps-2019/crest-2019-papers"><span class="yr">2019</span><span class="ed">4th edition<br>ETAPS<br>Prague</span></a></li>
+      <li><a href="https://finkbeiner.groups.cispa.de/crest2018"><span class="yr">2018</span><span class="ed">3rd edition<br>ETAPS<br>Thessaloniki</span></a></li>
+      <li><a href="https://kim28.wwwdns.kim.uni-konstanz.de/crest2017"><span class="yr">2017</span><span class="ed">2nd edition<br>ETAPS<br>Uppsala</span></a></li>
+      <li><a href="https://crest2016.inria.fr"><span class="yr">2016</span><span class="ed">1st edition<br>ETAPS<br>Eindhoven</span></a></li>
+    </ul>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2027 CREST organizers</span>
-    <span>Part of <a href="https://conferences.i-cav.org/2027/">CAV 2027</a> · <a href="https://sites.google.com/view/crest26">CREST 2026</a></span>
+    <span>Part of <a href="https://conferences.i-cav.org/2027/">CAV 2027</a> · <a href="#previous">Previous editions</a></span>
   </div>
 </footer>
 
